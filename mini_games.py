@@ -45,3 +45,30 @@ def magic8Ball():
     elif randNum == 20:
         response = "Very doubtful."
     print(response)
+
+def rock_paper_scissors():
+    pc_options = ["rock", "paper", "scissors"]
+    user_option = input("What woyld you choose? rock/paper/scissors: ")
+    randnum = random.randint(0, len(pc_options) - 1)
+    if randnum == 0 and user_option == "scissors":
+        print(pc_options[randnum])
+        print(user_option)
+        print("you lost")
+    elif randnum == 1 and user_option == "rock":
+        print(pc_options[randnum])
+        print(user_option)
+        print("you lost")
+    elif randnum == 2 and user_option == "paper":
+        print(pc_options[randnum])
+        print(user_option)
+        print("you lost")
+    elif pc_options[randnum] == user_option:
+        print(pc_options[randnum])
+        print(user_option)
+        print("It's a draw")
+    else:
+        print(pc_options[randnum])
+        print(user_option)
+        print("You WIN!")
+
+rock_paper_scissors()
